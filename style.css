@@ -1,0 +1,310 @@
+/* Configuracion Global */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(#03581b45, #0000016b);
+  background-size: cover;
+  height: 100%;
+  font-size: 2rem;
+  margin: 0 0;
+}
+
+#inicio .contenido header{
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  width: 100%;
+}
+
+#inicio .contenido header .contenido-header{
+  max-width: 110rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+#inicio .contenido header .contenido-header h1{
+  text-align: center;
+  color: #fe5e41;
+}
+
+#inicio .contenido header .contenido-header nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+#inicio .contenido header .contenido-header nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1.2rem;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+#inicio .contenido header .contenido-header nav ul a:hover{
+  color: #fe5e41;
+  font-size: 2.3rem;
+}
+
+
+
+/* Contenedor de las tarjetas */
+#store-container {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  max-width: 47%;
+}
+
+#store-container .producto {
+  border-radius: 2rem;
+  border: solid 0.2rem #ccc;
+  padding: 2rem;
+  color: white;
+  background: linear-gradient(#0000007c, #5123016b);
+  margin-top: 5rem;
+  width: 20rem;
+}
+
+#store-container .producto:hover {
+  background: rgba(0, 0, 0, 0.187);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.825);
+}
+
+/* Imagenes de las tarjetas */
+#store-container .producto .imagen {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  border-radius: 5rem;
+}
+#store-container .producto .imagen:hover {
+  border-radius: 1rem;
+  transition: 0.4s;
+}
+
+#store-container .producto .nombre {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#store-container .producto .precio {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+#store-container .producto div {
+  padding: 1rem 0;
+}
+
+/* Contenedor del Carrito de compras */
+#carrito-compra-container {
+  position: fixed;
+  height: 85vh;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.453);
+  color: white;
+  right: 0;
+  width: 30rem;
+  border: solid 1px #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 7.5rem;
+  max-width: 40%;
+}
+
+/* Ocultar o Mostrar carrito */
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.total {
+  padding: 2rem 0;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Todos los Botones */
+button {
+  border: none;
+  background-color: #f1d91c;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Botonnes de agregar (+) y eliminar (-) */
+.agregarUno {
+  background: green;
+}
+.agregarUno:hover {
+  color: white;
+  font-weight: bold;
+  border: solid gray 0.1rem;
+}
+.eliminarUno {
+  background-color: red;
+}
+.eliminarUno:hover {
+  color: white;
+  font-weight: bold;
+  border: solid gray 0.1rem;
+}
+
+/* boton de añadir al carrito */
+.actions .add {
+  color: #fe5e41;
+  background: #0606066b;
+  font-weight: bold;
+}
+.actions .add:hover {
+  color: #2fff89d4;
+  transition: 0.3s;
+}
+
+/* Boton de compra final */
+.bCompra {
+  font-size: 2rem;
+  background: #fe5e41;
+}
+.bCompra:hover {
+  background: #2fff89d4;
+  transition: 1s;
+}
+
+/* BOTON PARA IR ARRIBA */
+.button-arriba {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-arriba .item {
+  width: 0%;
+  height: 0%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #283593;
+  color: #fff !important;
+  opacity: 0;
+  transform: scale(0);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: all .5s ease;
+}
+
+.shows {
+  animation: popup .5s ease-in-out !important;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transition: all .5s ease;
+}
+
+@keyframes popup {
+  0% {
+      width: 0% !important;
+      height: 0% !important;
+      opacity: 0 !important;
+  }
+
+  50% {
+      width: 50% !important;
+      height: 50% !important;
+      opacity: 0.5 !important;
+  }
+
+  100% {
+      width: 100% !important;
+      height: 100% !important;
+      opacity: 1 !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #store-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/* LogIn */
+
+/*ESTO ES PARA EL COLOR DEL FONDO DEL MODAL */
+#modal::backdrop {
+  background-color: rgba(0,0,0,.55);
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3rem;
+  background: rgba(253, 253, 255, 0.79);
+  box-shadow: 8px 8px 15px #000000;
+  padding: 4rem;
+}
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.modalForm h4 {
+  padding: 1rem;
+}
+.modalForm input {
+  display: flex;
+  margin: 0 0 2rem 0;
+  border-radius: 0.5rem;
+}
+.modalForm button {
+  background: black;
+  color: white;
+  margin: 1rem 0 1rem 0;
+  outline: none;
+}
+.modalForm button:hover {
+  color: #fe5e41;
+}
+
+#btn-abrir-modal {
+  border-bottom: none;
+  background: none;
+  color: white;
+  font-size: 1.77rem;
+  transition: 0.5s;
+}
+#btn-abrir-modal:hover {
+  color: #fe5e41;
+  font-size: 2rem;
+}

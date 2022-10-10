@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/bed6da60a0.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="#">
+  <title>Carrito de Compras</title>
+</head>
+<body>
+
+  <section id="inicio">
+    <div class="contenido">
+        <header>
+            <div class="contenido-header">
+                <h1>Verduleria Online</h1>
+                <nav id="nav">
+                    <ul id="links">
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="#Productos" onclick="FunctionPedir()">PRODUCTOS</a></li>
+                        <li><button id="btn-abrir-modal">LOG IN</button></li>
+                    </ul>
+                </nav>
+              </div>
+            </header>
+          </div>
+        </section>
+
+        <dialog id="modal">
+          <div class="modalContainer">
+              <form method="dialog" class="modalForm" id="login">
+                <h4>INICIAR SESION</h4>
+                <label>Usuario <input type="text" maxlength="10" id="user"></label>
+                <label>Contraseña <input type="text" maxlength="20" id="password"></label>
+                <div>
+                  <button id="buttonLogin" type="submit">LOGIN</button>
+                  <button id="buttonLogout">LOGOUT</button>
+                </div>
+              </form>
+          </div>
+        </dialog>
+
+
+  <div id="app">
+    <div class="menu">
+      <div id="carrito-compra-container" class="hide"></div>
+    </div>
+    <div id="store-container"></div>
+  </div>
+
+  <div class="button-arriba">
+    <a class="item" id="buttonTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+  
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./index.js" type="module"></script>
+  <script src="./old.js"></script>
+</body>
+</html>

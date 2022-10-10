@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "nombre": "Banana",
+    "precio": 220,
+    "cantidad": 10,
+    "image": "./imgs/banana.jpg"
+  },
+  {
+    "id": 1,
+    "nombre": "Frutilla",
+    "precio": 1200,
+    "cantidad": 20,
+    "image": "./imgs/frutilla.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Papa",
+    "precio": 130,
+    "cantidad": 20,
+    "image": "./imgs/papa.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Kiwi",
+    "precio": 300,
+    "cantidad": 15,
+    "image": "./imgs/kiwi.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Pera",
+    "precio": 900,
+    "cantidad": 8,
+    "image": "./imgs/pera.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Limon",
+    "precio": 200,
+    "cantidad": 30,
+    "image": "./imgs/limon.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Papaya",
+    "precio": 1400,
+    "cantidad": 13,
+    "image": "./imgs/papaya.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Palta",
+    "precio": 1300,
+    "cantidad": 10,
+    "image": "./imgs/palta.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Melon",
+    "precio": 750,
+    "cantidad": 12,
+    "image": "./imgs/melon.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Maracuya",
+    "precio": 1800,
+    "cantidad": 5,
+    "image": "./imgs/maracuya.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Zapallo",
+    "precio": 400,
+    "cantidad": 20,
+    "image": "./imgs/zapallo.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Morron",
+    "precio": 1200,
+    "cantidad": 15,
+    "image": "./imgs/morron.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Sandia",
+    "precio": 650,
+    "cantidad": 10,
+    "image": "./imgs/sandia.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Uva",
+    "precio": 2000,
+    "cantidad": 10,
+    "image": "./imgs/uva.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Durazno",
+    "precio": 620,
+    "cantidad": 8,
+    "image": "./imgs/durazno.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Tomate",
+    "precio": 480,
+    "cantidad": 20,
+    "image": "./imgs/tomate.jpg"
+  },
+  {
+    "id": 16,
+    "nombre": "Naranja",
+    "precio": 220,
+    "cantidad": 50,
+    "image": "./imgs/naranja.jpg"
+  },
+  {
+    "id": 17,
+    "nombre": "Lechuga",
+    "precio": 720,
+    "cantidad": 6,
+    "image": "./imgs/lechuga.jpg"
+  }
+]
