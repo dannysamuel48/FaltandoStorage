@@ -54,7 +54,14 @@ const app = async () => {
             agotado();
           }
         } else {
-          carritoDeCompra.productos.push({ id, cantidad });
+          if(localStorage.getItem('user')){
+            carritoDeCompra.productos = localStorage.getItem('carrito') ? JSON.parse(localStorage.getItem('carrito')) : []// hans
+            carritoDeCompra.productos.push({ id, cantidad });
+            localStorage.setItem('carrito', JSON.stringify(carritoDeCompra.productos));
+          }else {
+            carritoDeCompra.productos.push({ id, cantidad });
+          }  
+          
         }
       },
 
@@ -105,6 +112,9 @@ const app = async () => {
       },
 
       buy: () => {
+        if(localStorage.getItem('user')){
+          localStorage.setItem('carrito',  JSON.stringify(carritoDeCompra.productos));
+        }
         db.metodos.remove(carritoDeCompra.productos);
         carritoDeCompra.productos = [];
       },
@@ -155,9 +165,14 @@ const app = async () => {
     });
   }
 
+  // let newArray = [];
   function shopingCart() {
     const html = carritoDeCompra.productos.map((producto) => {
       const dbproducto = db.metodos.find(producto.id);
+      
+      // newArray.push(dbproducto);
+      // console.log(newArray);
+
       return `
       <div class="producto">
         <div class="nombre">${dbproducto.nombre}</div>
@@ -183,7 +198,7 @@ const app = async () => {
       carritoDeCompra.productos.length > 0
         ? `
     <div class="cart-actions">
-      <button class="bCompra" id="bCompra">comprar</button>
+      <button class="bCompra" id="bCompra">Comprar</button>
     </div>
   `
         : "";
@@ -282,7 +297,13 @@ const app = async () => {
   botonLogout.addEventListener("click", () => {
     if (user && password.value.length == 0) {
       //UTILIZANDO SweetAlert
-      warning()
+      if(localStorage.getItem('user')){
+        localStorage.removeItem('user');
+        localStorage.removeItem('carrito');
+      }else{
+        warning()
+      }
+      
 
     } else {
       logout();
